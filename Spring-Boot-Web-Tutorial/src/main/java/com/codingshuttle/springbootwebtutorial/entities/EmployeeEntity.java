@@ -1,7 +1,9 @@
 package com.codingshuttle.springbootwebtutorial.entities;
 
+import com.codingshuttle.springbootwebtutorial.dto.Employeedto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -24,6 +26,7 @@ public class EmployeeEntity {
     @JsonProperty("isActive")
     private Boolean isActive;
 
+    private String role;
 
-
+    private Double salary;
 }

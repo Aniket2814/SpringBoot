@@ -42,7 +42,7 @@ public class EmployeeService {
     }
 
 
-    public Employeedto createNewEmployee(EmployeeEntity inputemp) {
+    public Employeedto createNewEmployee(Employeedto inputemp) {
         EmployeeEntity toSaveEntity = modelMapper.map(inputemp, EmployeeEntity.class);
         EmployeeEntity SavedemployeeEntity = employeeRepository.save(toSaveEntity);
         return modelMapper.map(SavedemployeeEntity, Employeedto.class);
