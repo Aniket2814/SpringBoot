@@ -1,4 +1,5 @@
 package com.codingshuttle.springbootwebtutorial.dto;
+import com.codingshuttle.springbootwebtutorial.annotations.EmployeeRoleValidation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
@@ -19,7 +20,7 @@ public class Employeedto {
     private String name;
     @Email(message="email must be valid in format")
     private String email;
-@Pattern(regexp = "^(ADMIN|USER)$")
+@EmployeeRoleValidation
 private String role;
 
     @Max(value=80,message = "age cannot be greater than 80")

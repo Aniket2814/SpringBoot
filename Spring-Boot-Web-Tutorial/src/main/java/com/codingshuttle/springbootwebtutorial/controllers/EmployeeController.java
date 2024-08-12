@@ -54,7 +54,7 @@ return new ResponseEntity<>(savedEmployee, HttpStatus.CREATED);
     }
 
     @PutMapping(path = "/{employeeID}")
-    public ResponseEntity<Employeedto> updateEmployeeById(@RequestBody Employeedto employeedto, @PathVariable Long employeeID) {
+    public ResponseEntity<Employeedto> updateEmployeeById(@RequestBody @Valid  Employeedto employeedto, @PathVariable Long employeeID) {
         return ResponseEntity.ok(employeeService.updateEmployeeById(employeeID, employeedto));
     }
 
