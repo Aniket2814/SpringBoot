@@ -32,7 +32,7 @@ public class EmployeeController {
 //if(employeedto==null) return ResponseEntity.notFound().build();
 //return ResponseEntity.ok(employeedto);
   return employeedto.map(employeedto1 ->ResponseEntity.ok(employeedto1))
-           .orElse(ResponseEntity.notFound().build());
+           .orElseThrow(()->new NoSuchElementException("Emplo yee Not found"));
     }
 
 
